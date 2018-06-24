@@ -22,3 +22,8 @@
 </tr>
 </tbody>
 </table>
+
+
+#  License
+
+This project is licensed under the MIT license.

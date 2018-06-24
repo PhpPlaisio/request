@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+
 namespace SetBased\Abc\Request;
 
 /**
@@ -16,7 +16,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function getMethod();
+  public function getMethod(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -27,7 +27,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function getRequestUri();
+  public function getRequestUri(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -38,7 +38,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isAjax();
+  public function isAjax(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -49,7 +49,23 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isDelete();
+  public function isDelete(): bool;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns true if the current environment is a development environment.
+   *
+   * @return bool
+   */
+  public function isEnvDev(): bool;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns true if the current environment is a production environment.
+   *
+   * @return bool
+   */
+  public function isEnvProd(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -60,7 +76,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isGet();
+  public function isGet(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -71,10 +87,9 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isHead();
+  public function isHead(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
-
   /**
    * Returns true if this is a OPTIONS request. Otherwise returns false.
    *
@@ -83,7 +98,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isOptions();
+  public function isOptions(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -94,7 +109,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isPatch();
+  public function isPatch(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -105,7 +120,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isPost();
+  public function isPost(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -116,7 +131,7 @@ interface Request
    * @api
    * @since 1.0.0
    */
-  public function isPut();
+  public function isPut(): bool;
 
   //--------------------------------------------------------------------------------------------------------------------
 }

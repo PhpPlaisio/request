@@ -1,0 +1,9 @@
+\SetBased\Abc\RequestHandler\CoreRequestHandler::handleRequest
+$_SERVER['ABC_ENV']
+
+
+\SetBased\Abc\RequestHandler\CoreRequestHandler::checkAuthorization
+$_GET['pag']
+$_GET['pag_alias']
+
+
