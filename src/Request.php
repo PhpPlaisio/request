@@ -20,6 +20,17 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the remote IP (this is always the next hop, not necessarily the user's IP address).
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getRemoteIp(): ?string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the requested relative URL after. It includes the query part if any.
    *
    * @return string
@@ -28,6 +39,17 @@ interface Request
    * @since 1.0.0
    */
   public function getRequestUri(): string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the user agent.
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getUserAgent(): ?string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
