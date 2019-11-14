@@ -1,18 +1,17 @@
 {
-  "name": "setbased/abc-request",
-  "description": "ABC-Framework: Request",
+  "name": "plaisio/request",
+  "description": "PhpPlaisio: Request",
   "keywords": [
-    "ABC-Framework",
+    "PhpPlaisio",
     "Request"
   ],
+  "license": "MIT",
   "require": {
     "php": ">=7.1.0"
   },
-  "type": "library",
-  "license": "MIT",
   "autoload": {
     "psr-4": {
-      "SetBased\\Abc\\Request\\": "src/"
+      "Plaisio\\Request\\": "src/"
     }
   }
 }

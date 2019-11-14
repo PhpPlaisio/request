@@ -1,9 +1,10 @@
 <?php
+declare(strict_types=1);
 
-namespace SetBased\Abc\Request;
+namespace Plaisio\Request;
 
 /**
- * Interface for classes providing information about an HTTP request.
+ * Interface providing information about an HTTP request.
  */
 interface Request
 {
