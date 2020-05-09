@@ -10,6 +10,17 @@ interface Request
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the accepted languages by the user agent.
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getAcceptLanguage(): ?string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the method of the current request.
    *
    * @return string
@@ -21,6 +32,18 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the URL of the page (if any) which referred the user agent to the current page. This is set by the user
+   * agent and cannot be trusted.
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getReferrer(): ?string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the remote IP (this is always the next hop, not necessarily the user's IP address).
    *
    * @return string|null
@@ -29,6 +52,17 @@ interface Request
    * @since 1.0.0
    */
   public function getRemoteIp(): ?string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the timestamp of the start of the request, with microsecond precision.
+   *
+   * @return float|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getRequestTime(): ?float;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
