@@ -1,0 +1,9 @@
+<kernel>
+    <properties>
+        <property>
+            <type>\Plaisio\Request\Request</type>
+            <name>request</name>
+            <description>The helper object for providing information about the HTTP request.</description>
+        </property>
+    </properties>
+</kernel>
