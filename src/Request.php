@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Plaisio\Request;
 
+use Plaisio\Exception\BadRequestException;
+
 /**
  * Interface providing information about an HTTP request.
  */
@@ -21,6 +23,19 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the value of a mandatory HTTP header sent by the user agent.
+   *
+   * @param string $header The name of the HTTP header (case insensitive and without leading HTTP_).
+   *
+   * @return string
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getManHeader(string $header): string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the method of the current request.
    *
    * @return string
@@ -29,6 +44,19 @@ interface Request
    * @since 1.0.0
    */
   public function getMethod(): string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the value of an optional HTTP header sent by the user agent.
+   *
+   * @param string $header The name of the HTTP header (case insensitive and without leading HTTP_).
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getOptHeader(string $header): ?string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
