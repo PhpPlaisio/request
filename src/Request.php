@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Plaisio\Request;
 
-use Plaisio\Exception\BadRequestException;
-
 /**
  * Interface providing information about an HTTP request.
  */
