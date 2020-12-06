@@ -21,6 +21,19 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the value of cookie sent by the user agent.
+   *
+   * @param string $name The name of the cookie.
+   *
+   * @return string|null
+   *
+   * @api
+   * @since 1.0.0
+   */
+  public function getCookie(string $name): ?string;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the value of a mandatory HTTP header sent by the user agent.
    *
    * @param string $header The name of the HTTP header (case insensitive and without leading HTTP_).
