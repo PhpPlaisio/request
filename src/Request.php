@@ -36,7 +36,7 @@ interface Request
   /**
    * Returns the value of a mandatory HTTP header sent by the user agent.
    *
-   * @param string $header The name of the HTTP header (case insensitive and without leading HTTP_).
+   * @param string $header The name of the HTTP header (case-insensitive and without leading HTTP_).
    *
    * @return string
    *
@@ -60,7 +60,7 @@ interface Request
   /**
    * Returns the value of an optional HTTP header sent by the user agent.
    *
-   * @param string $header The name of the HTTP header (case insensitive and without leading HTTP_).
+   * @param string $header The name of the HTTP header (case-insensitive and without leading HTTP_).
    *
    * @return string|null
    *
@@ -127,7 +127,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is an AJAX (XMLHttpRequest) request. Otherwise returns false.
+   * Returns whether this is an AJAX (XMLHttpRequest) request.
    *
    * @return bool
    *
@@ -138,7 +138,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a DELETE request. Otherwise returns false.
+   * Returns whether this is a DELETE request.
    *
    * @return bool
    *
@@ -149,7 +149,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if the current environment is a development environment.
+   * Returns whether the current environment is a development environment.
    *
    * @return bool
    */
@@ -157,7 +157,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if the current environment is a production environment.
+   * Returns whether the current environment is a production environment.
    *
    * @return bool
    */
@@ -165,7 +165,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a GET request. Otherwise returns false.
+   * Returns whether this is a GET request.
    *
    * @return bool
    *
@@ -176,7 +176,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a HEAD request. Otherwise returns false.
+   * Returns whether this is a HEAD request.
    *
    * @return bool
    *
@@ -187,7 +187,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a OPTIONS request. Otherwise returns false.
+   * Returns whether this is a OPTIONS request.
    *
    * @return bool
    *
@@ -198,7 +198,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a PATCH request. Otherwise returns false.
+   * Returns whether this is a PATCH request.
    *
    * @return bool
    *
@@ -209,7 +209,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a POST request. Otherwise returns false.
+   * Returns whether this is a POST request.
    *
    * @return bool
    *
@@ -220,7 +220,7 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns true if this is a PUT request. Otherwise returns false.
+   * Returns whether this is a PUT request.
    *
    * @return bool
    *
@@ -231,9 +231,12 @@ interface Request
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Whether the request is sent via a secure channel (https).
+   * Returns whether the request is sent via a secure channel (https).
    *
    * @return bool
+   *
+   * @api
+   * @since 1.0.0
    */
   public function isSecureChannel(): bool;
 
