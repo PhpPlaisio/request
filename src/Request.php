@@ -95,6 +95,12 @@ interface Request
   public function getOptHeader(string $header): ?string;
 
   //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Validates the request headers. A BadRequestException must be thrown if the request headers are invalid.
+   */
+  public function validate(): void;
+
+  //--------------------------------------------------------------------------------------------------------------------
 }
 
 //----------------------------------------------------------------------------------------------------------------------
