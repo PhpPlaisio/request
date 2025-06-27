@@ -18,7 +18,8 @@ namespace Plaisio\Request;
  * @property-read array   $acceptLanguages      The languages acceptable by the user agent sorted by preference. The
  *                                              first element is the most preferred language.
  * @property-read string  $baseUrl              The requested relative URL.
- * @property-read array   $cgi                  The CGI parameters.
+ * @property-read array   $cgi                  The sanitized CGI (a.k.a. GET) parameters.
+ * @property-read array   $cookie               The sanitized cookies.
  * @property-read ?string $contentType          The content type of the send media type.
  * @property-read bool    $isAjax               Whether this is an AJAX (XMLHttpRequest) request.
  * @property-read bool    $isDelete             Whether this is a DELETE request.
@@ -34,6 +35,7 @@ namespace Plaisio\Request;
  * @property-read string  $hostname             The hostname of the requested URL.
  * @property-read string  $method               The method of the request.
  * @property-read int     $port                 The port to which the request was made.
+ * @property-read array   $post                 The sanitized POST variables.
  * @property-read ?string $referrer             The URL of the page (if any) which referred the user agent to the
  *                                              current page. This is set by the user agent and cannot be trusted.
  * @property-read ?string $remoteIp             The remote IP (this is always the next hop, not necessarily the user's
@@ -42,6 +44,7 @@ namespace Plaisio\Request;
  * @property-read string  $requestUri           The requested relative URL after. It includes the query part if any.
  * @property-read array   $secureHeaders        The lists of headers that are, by default, subject to the trusted host
  *                                              configuration.
+ * @property-read array   $server               The sanitized SERVER variables.
  * @property-read ?string $userAgent            The user agent.
  */
 interface Request
